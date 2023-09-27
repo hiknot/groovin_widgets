@@ -838,7 +838,7 @@ enum _ListTileSlot {
 }
 
 class _GroovinListTile extends RenderObjectWidget
-    with SlottedMultiChildRenderObjectWidgetMixin<_ListTileSlot> {
+    with SlottedMultiChildRenderObjectWidgetMixin<_ListTileSlot, RenderBox> {
   const _GroovinListTile({
     this.leading,
     required this.title,
@@ -917,7 +917,7 @@ class _GroovinListTile extends RenderObjectWidget
 }
 
 class _RenderListTile extends RenderBox
-    with SlottedContainerRenderObjectMixin<_ListTileSlot> {
+    with SlottedContainerRenderObjectMixin<_ListTileSlot, RenderBox> {
   _RenderListTile({
     required bool isDense,
     required VisualDensity visualDensity,
